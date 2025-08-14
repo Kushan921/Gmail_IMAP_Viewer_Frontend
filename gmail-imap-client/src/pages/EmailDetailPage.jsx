@@ -14,7 +14,7 @@ const EmailDetailPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await api.get(`/emails/${id}`);
+      const res = await api.get(`/email/emails/${id}`);
       setEmail(res.data);
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to fetch email');

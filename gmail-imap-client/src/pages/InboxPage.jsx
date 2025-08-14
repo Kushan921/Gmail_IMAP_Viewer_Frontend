@@ -19,7 +19,7 @@ const InboxPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await api.get('/emails', { params: { page: pageNum, limit: 10, search } });
+      const res = await api.get('/email/emails', { params: { page: pageNum, limit: 10, search } });
       setEmails(res.data.emails);
       setPageCount(res.data.pages);
       setTotalEmails(res.data.total);
